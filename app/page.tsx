@@ -97,6 +97,24 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      {/* Image Section */}
+      <section className="pb-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+
+          <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-12 __max-w-6xl mx-auto text-center">
+            <div className="md:h-[28rem] overflow-hidden rounded-xl">
+              <img src="/images/outreach.jpeg" alt="" className="" />
+            </div>            
+            <div className="md:h-[28rem] overflow-hidden rounded-xl">
+              <img src="/images/outreach2.jpeg" alt="" className="" />
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* Call to Action */}
       <section className="py-20 bg-brand-500 text-white">
         <div className="container mx-auto px-4 text-center">
