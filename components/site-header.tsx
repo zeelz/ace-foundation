@@ -34,13 +34,10 @@ export function SiteHeader() {
               </div>
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden group-hover:block">
                 <Link href="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#e6ce85]/50">
-                  Who We Are
+                  About Us
                 </Link>
-                <Link href="/about#our-story" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#e6ce85]/50">
-                  Our Story
-                </Link>
-                <Link href="/about#leadership" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#e6ce85]/50">
-                  Leadership
+                <Link href="/about#areas-of-impact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#e6ce85]/50">
+                  Areas of Impact
                 </Link>
               </div>
             </div>
@@ -103,13 +100,10 @@ export function SiteHeader() {
                     {aboutOpen && (
                       <div className="mt-2 ml-4 space-y-2">
                         <a href="/about" className="block text-gray-300 hover:text-[#e6ce85]">
-                          Who We Are
+                          About Us
                         </a>
-                        <a href="/about#our-story" className="block text-gray-300 hover:text-[#e6ce85]">
-                          Our Story
-                        </a>
-                        <a href="/about#leadership" className="block text-gray-300 hover:text-[#e6ce85]">
-                          Leadership
+                        <a href="/about#areas-of-impact" className="block text-gray-300 hover:text-[#e6ce85]">
+                          Areas of Impact
                         </a>
                       </div>
                     )}

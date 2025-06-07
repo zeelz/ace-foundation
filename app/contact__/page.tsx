@@ -81,7 +81,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
                 <p className="text-gray-600 mb-4">Call us directly for immediate assistance</p>
-                <p className="font-medium text-gray-800">+234 (0) 123-4567890</p>
+                <p className="font-medium text-gray-800">+234 (0) 806 546 9779</p>
               </div>
             </Card>
 
@@ -94,7 +94,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
                 <p className="text-gray-600 mb-4">Send us an email and we'll respond within 24 hours</p>
-                <p className="font-medium text-gray-800">hello@acefoundation.com.ng</p>
+                <p className="font-medium text-gray-800">hello[@]acefoundation.com.ng</p>
               </div>
             </Card>
 
