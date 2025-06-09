@@ -23,7 +23,7 @@ export const FormAction = async (formData: FormData) => {
         \nMessage: ${message}
     `
 
-const TOKEN = process.env["NEXT_PUBLIC_TOKEN"] || "";
+const TOKEN = process.env["NEXT_TOKEN"] || "";
 
 const transport = Nodemailer.createTransport(
   MailtrapTransport({
