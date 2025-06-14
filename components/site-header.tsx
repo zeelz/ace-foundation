@@ -144,7 +144,7 @@ export function SiteHeader() {
                 </div>
               </SheetContent>
             </Sheet>
-          </nav>~
+          </nav>
         </div>
       </div>
     </header>
