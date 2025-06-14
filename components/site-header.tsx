@@ -84,7 +84,7 @@ export function SiteHeader() {
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] bg-brand-500 text-white border-brand-500">
                 <div className="flex flex-col space-y-6 mt-8">
-                  <a href="#" className="text-lg hover:text-[#e6ce85] transition-colors">
+                  <a href="/" className="text-lg hover:text-[#e6ce85] transition-colors">
                     Home
                   </a>
 
@@ -133,17 +133,18 @@ export function SiteHeader() {
                     )}
                   </div>
 
-                  <a href="#" className="text-lg hover:text-[#e6ce85] transition-colors">
+                  <a href="/contact" className="text-lg hover:text-[#e6ce85] transition-colors">
                     Contact
                   </a>
-
-                  <Button className="bg-[#e6ce85] hover:bg-[#e6ce85]/50 text-brand-500 font-semibold px-6 py-2 rounded-full mt-6">
-                    GET INVOLVED
-                  </Button>
+                  <Link href="/get-involved">
+                    <Button className="bg-[#e6ce85] hover:bg-[#e6ce85]/50 text-brand-500 font-semibold px-6 py-2 rounded-full mt-6">
+                      GET INVOLVED
+                    </Button>
+                  </Link>
                 </div>
               </SheetContent>
             </Sheet>
-          </nav>
+          </nav>~
         </div>
       </div>
     </header>
