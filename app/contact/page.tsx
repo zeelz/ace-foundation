@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { SiteFooter } from "@/components/site-footer"
 import { FormAction } from "./action"
+import { FormEventHandler, useState, useTransition } from "react"
 
 export default function ContactPage() {
 
@@ -51,6 +52,19 @@ export default function ContactPage() {
   //     })
   //   }, 1500)
   // }
+
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [message, setMessage] = useState("")
+  const [isPending, startTransition] = useTransition()
+
+  const handleSubmit = async (formData: FormData) => {
+        // setIsSubmitting(true)
+    startTransition( async() => {
+      const res = await FormAction(formData)
+        setMessage(res.message)    
+        // setIsSubmitting(false)
+    })
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -111,7 +125,7 @@ export default function ContactPage() {
             <div className="h-2 bg-indigo-900" />
             <div className="p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Send us a message</h2>
-              <form action={FormAction} className="space-y-6">
+              <form action={handleSubmit}  className="space-y-6"> {/* action={FormAction} */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="first-name">First name</Label>
@@ -138,9 +152,13 @@ export default function ContactPage() {
                   <Textarea name="message" placeholder="How can we help you?" className="min-h-[120px]" required />
                 </div>
 
-                <Button type="submit" className="w-full bg-indigo-900 hover:bg-indigo-800">
-                  Send Message
+                <Button type="submit" disabled={isPending} className="w-full bg-indigo-900 hover:bg-indigo-800">
+                  
+                  { isPending ?  "Submitting" : "Send Message" }   
                 </Button>
+                <p>               
+                  {message && message}
+                </p>
               </form>
             </div>
           </div>

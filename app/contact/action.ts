@@ -10,11 +10,11 @@ import { MailtrapTransport } from "mailtrap";
 
 export const FormAction = async (formData: FormData) => {
 
-    const firstname = formData.get("firstname")
-    const lastname = formData.get("lastname")
-    const email = formData.get("email")
-    const phone = formData.get("phone")
-    const message = formData.get("message")
+    const firstname = formData.get("firstname") as string
+    const lastname = formData.get("lastname") as string
+    const email = formData.get("email") as string
+    const phone = formData.get("phone") as string
+    const message = formData.get("message") as string
 
     const mailBody = `
         \nName: ${firstname} ${lastname}
@@ -45,11 +45,11 @@ transport
     to: recipients,
     subject: "Message from Contact Form",
     text: mailBody,
-    category: "Integration Test",
+    category: "Contact Form",
   })
   .then(console.log, console.error);
 
-
+  return {success: true, message: "sent successfully"}
 
 
 }
