@@ -156,7 +156,7 @@ export default function ContactPage() {
                   
                   { isPending ?  "Submitting" : "Send Message" }   
                 </Button>
-                <p>               
+                <p>
                   {message && message}
                 </p>
               </form>
