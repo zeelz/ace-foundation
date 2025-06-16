@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { SiteFooter } from "@/components/site-footer"
 import { FormAction } from "./action"
-import { FormEventHandler, useState, useTransition } from "react"
+import { FormEventHandler, useEffect, useState, useTransition } from "react"
 
 export default function ContactPage() {
 
@@ -52,10 +52,11 @@ export default function ContactPage() {
   //     })
   //   }, 1500)
   // }
+  
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false) /** old school */
   const [message, setMessage] = useState("")
-  const [isPending, startTransition] = useTransition()
+  const [isPending, startTransition] = useTransition() /** new school */
 
   const handleSubmit = async (formData: FormData) => {
         // setIsSubmitting(true)
@@ -65,6 +66,14 @@ export default function ContactPage() {
         // setIsSubmitting(false)
     })
   }
+
+  useEffect(() => {
+    if(message) {
+      setTimeout(() => {
+        setMessage("") /** clear the message after 5s */
+      }, 5000);
+    }
+  }, [message])
 
   return (
     <div className="min-h-screen bg-white">
